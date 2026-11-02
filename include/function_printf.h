@@ -6,7 +6,7 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/29 09:04:02 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/11/02 15:55:51 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/11/02 16:03:58 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ int		parse(const char *s, va_list *args);
 char	*ft_itoa_unsigned(unsigned int n);
 char	*ft_tohexa(unsigned int nb);
 int		printx(unsigned int nb);
-int		printX(unsigned int nb);
+int		print_x_maj(unsigned int nb);
 
 #endif

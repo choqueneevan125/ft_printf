@@ -6,7 +6,7 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/11/02 11:20:42 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/11/02 16:00:56 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/11/02 16:04:16 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	printx(unsigned int nb)
 	return (size);
 }
 
-int	printX(unsigned int nb)
+int	print_x_maj(unsigned int nb)
 {
 	char	*hex;
 	char	*hex_min;
