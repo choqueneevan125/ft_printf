@@ -20,7 +20,7 @@ Pour compiler la bibliothèque obligatoire :
 ```bash
 make
 ```
-Ceci générera l'archive statique `libft.a` à la racine du dépôt.
+Ceci générera l'archive statique `libftprintf.a` à la racine du dépôt.
 
 ### Autres règles du Makefile
  `make clean` : Supprime tous les fichiers objets (`.o`).
