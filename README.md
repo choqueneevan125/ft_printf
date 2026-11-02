@@ -35,7 +35,7 @@ Ceci générera l'archive statique `libftprintf.a` à la racine du dépôt.
 ```
 2. Compiler votre programme en liant `libft.a` et `libftprintf.a`
 ```bash
-cc -Wall -Wextra -Werror main.c -L. -lftprintf -L libft -lft -o prog
+cc -Wall -Wextra -Werror main.c -L. -lftprintf -L libft -lft -I include -o prog
 ```
 ---
 
