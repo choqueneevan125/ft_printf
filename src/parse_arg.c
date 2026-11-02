@@ -6,7 +6,7 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/29 10:52:45 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/11/02 16:04:03 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/11/02 16:15:00 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,7 @@ int	parse(const char *s, va_list *args)
 		return (printx(va_arg(*args, unsigned int)));
 	else if (s[0] == 'X')
 		return (print_x_maj(va_arg(*args, unsigned int)));
+	else if (s[0] == 'p')
+		return (print_pointor(va_arg(*args, void *)));
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/11/02 11:20:42 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/11/02 16:04:16 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/11/02 16:14:06 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,21 @@ int	print_x_maj(unsigned int nb)
 	hex = str_upper(hex_min);
 	free(hex_min);
 	size = ft_strlen(hex);
+	write(1, hex, size);
+	free(hex);
+	return (size);
+}
+
+int	print_pointor(void *ptr)
+{
+	unsigned long	addr;
+	int				size;
+	char			*hex;
+
+	addr = (unsigned long) ptr;
+	hex = ft_tohexa(addr);
+	size = ft_strlen(hex);
+	write(1, "0x", 2);
 	write(1, hex, size);
 	free(hex);
 	return (size);
