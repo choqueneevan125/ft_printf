@@ -6,7 +6,7 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/11/02 11:20:42 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/11/02 16:14:06 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/11/02 16:27:49 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,11 +65,13 @@ int	print_pointor(void *ptr)
 	int				size;
 	char			*hex;
 
+	if (!ptr)
+		return (printstr("(nil)"));
 	addr = (unsigned long) ptr;
 	hex = ft_tohexa(addr);
 	size = ft_strlen(hex);
 	write(1, "0x", 2);
 	write(1, hex, size);
 	free(hex);
-	return (size);
+	return (size + 2);
 }

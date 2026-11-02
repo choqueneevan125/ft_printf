@@ -6,20 +6,20 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/11/02 15:43:42 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/11/02 15:50:14 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/11/02 16:25:09 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "function_printf.h"
 
-static size_t	get_len_size_hexa(unsigned int nb)
+static size_t	get_len_size_hexa(unsigned long nb)
 {
 	if (nb < 16)
 		return (1);
 	return (1 + get_len_size_hexa(nb / 16));
 }
 
-char	*ft_tohexa(unsigned int nb)
+char	*ft_tohexa(unsigned long nb)
 {
 	const char	*hex_digits;
 	char		*res;
