@@ -6,60 +6,27 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/29 10:52:45 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/10/30 14:50:02 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/11/02 13:30:57 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "function_printf.h"
 
-static size_t	get_len_param(const char *s)
+int	parse(const char *s, va_list *args)
 {
-	int		i;
-	size_t	count;
+	char	*nbr;
+	int		len;
 
-	i = 0;
-	count = 0;
-	while (s[i] != '\0')
+	if (s[0] == 'c')
+		return (printchar(va_arg(*args, int)));
+	else if (s[0] == 's')
+		return (printstr(va_arg(*args, char *)));
+	else if (s[0] == 'i' || s[0] == 'd')
 	{
-		if (s[i] == '%')
-		{
-			if (ft_strchr(PARAM, s[i + 1]))
-			{
-				count++;
-			}
-		}
-		i++;
+		nbr = ft_itoa(va_arg(*args, int));
+		len = printstr(nbr);
+		free(nbr);
+		return (len);
 	}
-	return (count);
+	return (0);
 }
-
-char	*get_param(const char *s)
-{
-	int		i;
-	int		j;
-	char	*res;
-
-	i = 0;
-	j = 0;
-	res = malloc(sizeof(char) * (get_len_param(s) + 1));
-	if (!res)
-		return (NULL);
-	while (s[i] != 0)
-	{
-		if (s[i] == '%')
-		{
-			if (ft_strchr(PARAM, s[i + 1]))
-			{
-				res[j] = s[i + 1];
-				j++;
-			}
-		}
-		i++;
-	}
-	res[i] = 0;
-	return (res);
-}
-
-// void	parse(const char *s, ...)
-// {
-// }

@@ -6,7 +6,7 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/29 09:34:50 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/10/30 11:02:39 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/11/02 11:42:15 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,14 @@ char	*str_upper(char *str)
 	}
 	dest[i] = 0;
 	return (dest);
+}
+
+int	ft_strlen_int(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }

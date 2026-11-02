@@ -6,14 +6,12 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/29 09:04:02 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/10/30 14:34:23 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/11/02 13:34:21 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FUNCTION_PRINTF_H
 # define FUNCTION_PRINTF_H
-
-# define PARAM "cspdiuxX%"
 
 # include <stdlib.h>
 # include <stdarg.h>
@@ -22,5 +20,9 @@
 
 int		count_size_nb(int nb);
 char	*str_upper(char *str);
+int		printchar(char c);
+int		printstr(char *str);
+int		ft_strlen_int(char *str);
+int		parse(const char *s, va_list *args);
 
 #endif

@@ -1,35 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                       :::      ::::::::    */
-/*   count_size_nb.c                                   :+:      :+:    :+:    */
+/*   main.c                                            :+:      :+:    :+:    */
 /*                                                   +:+ +:+         +:+      */
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/10/29 09:03:01 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/10/29 10:40:12 by evanchoq        ###   ########.fr        */
+/*   Created: 2026/11/02 13:38:49 by evanchoq         #+#    #+#              */
+/*   Updated: 2026/11/02 13:39:54 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "function_printf.h"
+#include "ft_printf.h"
 
-int	count_size_nb(int nb)
+int	main(void)
 {
-	int		res;
-	long	n;
-
-	n = (long) nb;
-	res = 0;
-	if (n == 0)
-		return (1);
-	if (n < 0)
-	{
-		res++;
-		n = -n;
-	}
-	while (n > 0)
-	{
-		n = n / 10;
-		res++;
-	}
-	return (res);
+	ft_printf("Le nombre de charactere est %d\n", ft_printf("Hello, World %s\n", "Evan"));
+	return (0);
 }

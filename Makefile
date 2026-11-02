@@ -5,10 +5,10 @@ AR = ar rcs
 CFLAGS = -Wall -Wextra -Werror
 INCLUDE = include
 RM = rm -f
-
-SRC = src/count_size_nb.c \
-      src/ft_str.c \
-      src/parse_arg.c
+SRC = 	src/ft_str.c \
+		src/parse_arg.c \
+		src/printvalue.c \
+		src/ft_printf.c
 
 OBJ = $(SRC:.c=.o)
 
