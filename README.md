@@ -31,7 +31,7 @@ Ceci générera l'archive statique `libftprintf.a` à la racine du dépôt.
 
 1. Incluez le header dans votre code C :
 ```c
-#include "ft_printf"
+#include "ft_printf.h"
 ```
 2. Compiler votre programme en liant `libft.a` et `libftprintf.a`
 ```bash
