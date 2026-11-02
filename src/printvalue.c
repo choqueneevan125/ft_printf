@@ -6,7 +6,7 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/11/02 11:20:42 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/11/02 11:46:38 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/11/02 16:00:56 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,32 @@ int	printstr(char *str)
 		i++;
 	}
 	return (i);
+}
+
+int	printx(unsigned int nb)
+{
+	char	*hex;
+	int		size;
+
+	size = 0;
+	hex = ft_tohexa(nb);
+	size = ft_strlen(hex);
+	write(1, hex, size);
+	free(hex);
+	return (size);
+}
+
+int	printX(unsigned int nb)
+{
+	char	*hex;
+	char	*hex_min;
+	int		size;
+
+	hex_min = ft_tohexa(nb);
+	hex = str_upper(hex_min);
+	free(hex_min);
+	size = ft_strlen(hex);
+	write(1, hex, size);
+	free(hex);
+	return (size);
 }

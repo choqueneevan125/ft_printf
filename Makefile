@@ -8,7 +8,9 @@ RM = rm -f
 SRC = 	src/ft_str.c \
 		src/parse_arg.c \
 		src/printvalue.c \
-		src/ft_printf.c
+		src/ft_printf.c \
+		src/ft_itoi_unsigned.c \
+		src/hex.c
 
 OBJ = $(SRC:.c=.o)
 
