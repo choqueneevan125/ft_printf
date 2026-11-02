@@ -23,9 +23,9 @@ make
 Ceci générera l'archive statique `libftprintf.a` à la racine du dépôt.
 
 ### Autres règles du Makefile
- `make clean` : Supprime tous les fichiers objets (`.o`).
- `make fclean` : Supprime les fichiers objets et l'archive `libft.a`.
- `make re` : Recompile entièrement le projet (`fclean` puis `all`).
+* `make clean` : Supprime tous les fichiers objets (`.o`).
+* `make fclean` : Supprime les fichiers objets et l'archive `libft.a`.
+* `make re` : Recompile entièrement le projet (`fclean` puis `all`).
 
 ### Utilisation dans un projet
 
@@ -34,9 +34,9 @@ Ceci générera l'archive statique `libftprintf.a` à la racine du dépôt.
 #include "ft_printf"
 ```
 2. Compiler votre programme en liant `libft.a` et `libftprintf.a`
-   ```bash
-   cc -Wall -Wextra -Werror main.c -L. -lftprintf -L libft -lft -o prog
-   ```
+```bash
+cc -Wall -Wextra -Werror main.c -L. -lftprintf -L libft -lft -o prog
+```
 ---
 
 ## Ressources et Utilisation de l'IA
