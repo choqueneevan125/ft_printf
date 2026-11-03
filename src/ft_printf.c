@@ -6,11 +6,11 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/11/02 12:58:10 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/11/02 13:31:41 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/11/03 13:04:50 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "function_printf.h"
+#include "../function_printf.h"
 
 int	ft_printf(const char *s, ...)
 {

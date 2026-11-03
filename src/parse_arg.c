@@ -6,11 +6,11 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/29 10:52:45 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/11/02 16:56:08 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/11/03 13:04:18 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "function_printf.h"
+#include "../function_printf.h"
 #include <stdio.h>
 
 static int	flag_nb(const char *s, va_list *args)

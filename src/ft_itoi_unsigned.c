@@ -6,11 +6,11 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/11/02 13:50:36 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/11/02 16:38:34 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/11/03 13:05:21 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/function_printf.h"
+#include "../function_printf.h"
 
 static int	get_len_number(unsigned int nb)
 {
