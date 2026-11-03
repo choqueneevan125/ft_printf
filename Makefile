@@ -16,7 +16,7 @@ SRC = src/ft_str.c \
 	  src/ft_itoi_unsigned.c \
 	  src/hex.c
 
-OBJ         = $(SRC:.c=.o)
+OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
