@@ -1,37 +1,42 @@
 NAME = libftprintf.a
 
 CC = cc
-AR = ar rcs
 CFLAGS = -Wall -Wextra -Werror
 INCLUDE = include
+LIBFT_DIR = libft
+LIBFT = $(LIBFT_DIR)/libft.a
+
+AR = ar rcs
 RM = rm -f
-SRC = 	src/ft_str.c \
-		src/parse_arg.c \
-		src/printvalue.c \
-		src/ft_printf.c \
-		src/ft_itoi_unsigned.c \
-		src/hex.c
 
-OBJ = $(SRC:.c=.o)
+SRC = src/ft_str.c \
+	  src/parse_arg.c \
+	  src/printvalue.c \
+	  src/ft_printf.c \
+	  src/ft_itoi_unsigned.c \
+	  src/hex.c
 
-all: lib_build $(NAME)
+OBJ         = $(SRC:.c=.o)
 
-lib_build:
-	$(MAKE) -C libft
+all: $(NAME)
 
-$(NAME): $(OBJ)
-	$(AR) $@ $^
+$(NAME): $(OBJ) $(LIBFT)
+	@cp $(LIBFT) $(NAME)
+	$(AR) $(NAME) $(OBJ)
+
+$(LIBFT):
+	$(MAKE) -C $(LIBFT_DIR)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@ -I$(INCLUDE)
+	$(CC) $(CFLAGS) -I $(INCLUDE) -c $< -o $@
 
 clean:
 	$(RM) $(OBJ)
-	$(MAKE) clean -C libft
+	$(MAKE) -C $(LIBFT_DIR) clean
 
 fclean: clean
 	$(RM) $(NAME)
-	$(MAKE) fclean -C libft
+	$(MAKE) -C $(LIBFT_DIR) fclean
 
 re: fclean all
 

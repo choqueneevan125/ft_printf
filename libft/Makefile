@@ -1,9 +1,11 @@
 NAME = libft.a
 
 CC = cc
-AR = ar rcs
 CFLAGS = -Wall -Wextra -Werror
-RM = rm -f
+INCLUDE = ../include
+
+AR  = ar rcs
+RM  = rm -f
 
 SRC = ft_isalpha.c \
 	  ft_isdigit.c \
@@ -49,15 +51,15 @@ SRC = ft_isalpha.c \
 	  ft_calloc.c \
 	  ft_strdup.c
 
-OBJ = $(SRC:.c=.o)
+OBJ         = $(SRC:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(AR) $@ $?
 
-%.o : %.c
-	$(CC) $(CFLAGS) -c $< -o $@ -I ../include
+%.o: %.c
+	$(CC) $(CFLAGS) -I $(INCLUDE) -c $< -o $@
 
 clean:
 	$(RM) $(OBJ)
@@ -67,4 +69,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all fclean clean re
+.PHONY: all clean fclean re
