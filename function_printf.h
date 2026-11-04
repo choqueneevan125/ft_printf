@@ -6,7 +6,7 @@
 /*   By: evanchoq <evanchoq@student.42lehavre.fr>  #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/10/29 09:04:02 by evanchoq         #+#    #+#              */
-/*   Updated: 2026/11/02 16:29:58 by evanchoq        ###   ########.fr        */
+/*   Updated: 2026/11/04 09:14:07 by evanchoq        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include <stddef.h>
 # include "libft.h"
 
-int		count_size_nb(int nb);
 char	*str_upper(char *str);
 int		printchar(char c);
 int		printstr(char *str);
